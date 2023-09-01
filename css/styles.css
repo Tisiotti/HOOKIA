@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Azonix';
+    src: url(/assets/fonts/Azonix.otf);
+}
+
+@font-face {
+    font-family: 'RONORGERIONDEMO-Regular';
+    src: url(/assets/fonts/RONORGERIONDEMO-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Metropolitan';
+    src: url(/assets/fonts/Metropolitan.ttf);
+}
+
+
+
+
+:root {
+    --primary-color: #51F90E;
+    --secondary-color: #2F2F2F;
+    --terciary-color: #111010;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nexa-ExtraLight';
+}
+
+/*############## NAVBAR ##############*/
+
+.top-navbar {
+    background-image: url(/assets/images/1x/background-header.png);
+}
+
+.hookiah1 {
+    font-family: 'RONORGERIONDEMO-Regular';
+    font-size: 35px !important;
+    color: var(--primary-color) !important;
+    text-shadow: #51F90E 0px 0px 4.5px;
+}
+
+.login-text {
+    font-family: 'RONORGERIONDEMO-Regular';
+    font-size: 15px !important;
+    color: var(--primary-color) !important;
+    text-shadow: #51F90E 0px 0px 2.5px;
+    text-align: center;
+    margin-bottom: 0px !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        display: none !important;
+    }
+}
+
+/*############## NAVBAR NAV ##############*/
+
+.nav-sec-container {
+    background: url(/assets/images/1x/background-footer1.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.navbar-nav {
+    font-family: 'Azonix';
+}
+
+.navbar-nav .nav-item {
+    margin-left: 65px;
+}
+
+ul li a {
+    color: #51F90E !important;
+    text-shadow: #51F90E 0px 0px 2.5px;
+}
+
+
+
+/*############## MAIN BANNER DROP ##############*/
+
+.background-banner {
+    background-image: url(/assets/images/1x/Background-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: inset 0px -200px 150px rgba(0, 0, 0, 1);
+}
+
+.ritual-bands-text {
+    margin-top: 150px;
+    font-family: 'Metropolitan';
+    font-size: 105px !important;
+    color: #f90eab !important;
+    text-shadow: #f90eab 0px 0px 4.5px;
+    text-align: center;
+}
+
+.container-arrows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.container-arrows i {
+    color: #f90eab;
+}
+
+/*############## HELP SECTION ##############*/
+
+.info-help {
+    background-image: url(/assets/images/1x/desktop-wallpaper-ultemia-streetwear.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: inset 0px 0px 150px 50px rgba(0, 0, 0, 1);
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65vh;
+}
+
+.ship-info-container,
+.pay-info-container,
+.service-info-container {
+    width: 30% !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.ship-info-container:hover,
+.pay-info-container:hover,
+.service-info-container:hover {
+    box-shadow: 0px 0px 15px 1px #51F90E;
+    transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        width: 100% !important;
+        margin-top: 10px;
+    }
+}

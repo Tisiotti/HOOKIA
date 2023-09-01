@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Nexa-Heavy';
+    src: url(/assets/fonts/Nexa-Heavy.ttf);
+}
+@font-face {
+    font-family: 'Nexa-ExtraLight';
+    src: url(/assets/fonts/Nexa-ExtraLight.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sec-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/assets/images/1x/Background-cards.png) no-repeat center center/cover;
+    box-shadow: inset 0px 150px 50px rgba(0, 0, 0, 1);
+}
+
+.card {
+    border: none !important;
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 35px;
+    padding: 150px;
+}
+
+.container .card {
+    width: 100%;
+    background: #292929;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+}
+
+.container .card:hover {
+    box-shadow: 0 5px 20px #51F90E;
+    transition: 0.5s ease-in;
+}
+
+.container .card .imgBx {
+    position: relative;
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease-in-out;
+    transform-origin: right;
+}
+
+.container .card:hover .imgBx img {
+    transform: scale(1.1);
+}
+
+.content {
+    padding: 10px;
+}
+
+.container .card .content .productName h3 {
+    text-shadow: #51F90E 0px 0px 3.5px;
+    font-family: 'Nexa-Heavy';
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(240, 240, 240);
+    margin: 5px 0;
+}
+
+.productDesc {
+    font-family: 'Nexa-ExtraLight';
+    color: white;
+}
+
+.container .card .content .price {
+    font-family: 'Nexa-Heavy';
+    color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .card .content .price h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.container .card .content .price .fa-star {
+    color: #51F90E;
+    cursor: pointer;
+}
+
+/* BUTTON */
+
+.buy-btn {
+    background-color: #51F90E !important;
+    border: none !important;
+    color: black !important;
+    font-family: 'Nexa-Heavy' !important;
+}
+
+.buy-btn:hover {
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.5) !important;
+    transition: 0.5s ease-in-out !important;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+}

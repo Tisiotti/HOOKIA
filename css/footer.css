@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Nexa-ExtraLight';
+    src: url(/assets/fonts/Nexa-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: 'Nexa-Heavy';
+    src: url(/assets/fonts/Nexa-Heavy.ttf);
+}
+
+@font-face {
+    font-family: 'RONORGERIONDEMO-Regular';
+    src: url(/assets/fonts/RONORGERIONDEMO-Regular.otf);
+}
+
+
+.footer-container {
+    border-radius: 0 !important;
+    border: 0 !important;
+    background-color: #0E1A20 !important;
+}
+
+.followus-text {
+    align-items: center !important;
+    font-family: 'Nexa-ExtraLight' !important;
+}
+
+.followus-text {
+    display: flex;
+}
+
+.footer-1 {
+    background: url(/assets/images/1x/background-footer1.png) no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0px 0px 30px 5px #000000;
+}
+
+.footer-2 {
+    background: url(/assets/images/1x/background-footer2.png ) no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0px 0px 30px 5px #000000;
+}
+
+.footer-3 {
+    background: url(/assets/images/1x/background-footer3.png) no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0px 0px 30px 5px #000000;
+}
+
+/* ############## MID FOOTER ##############  */
+
+.card-h2 {
+    font-family: 'RONORGERIONDEMO-Regular';
+    color: #51F90E !important;
+    font-size: 50px !important;
+    text-align: center;
+}
+
+.card-h4 {
+    font-family: 'Nexa-Heavy';
+    color: #51F90E !important;
+    font-size: 20px !important;
+}
+
+.container-hours,
+.container-ubication {
+    background: transparent !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+    .w-mobile-100 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .w-desktop-25 {
+        width: 25%;
+    }
+}
+
+
+/* ############## END FOOTER ##############  */
+
+.end-text-footer {
+    font-size: 11px !important;
+}

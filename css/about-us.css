@@ -1,0 +1,205 @@
+:root {
+    --primary-color: #51F90E;
+    --secondary-color: #2F2F2F;
+    --terciary-color: #111010;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nexa-ExtraLight';
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    background: url(/assets/images/1x/background-header.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.main-text {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.hookiah1 {
+    margin-right: 43px;
+    font-family: 'RONORGERIONDEMO-Regular';
+    font-size: 35px !important;
+    color: var(--primary-color) !important;
+    text-shadow: #51F90E 0px 0px 2.5px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* ####################### MAIN ####################### */
+
+.about {
+    width: 100%;
+    height: 100%;
+    background-color: #131313;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .content img {
+    height: auto;
+    width: 600px;
+    max-width: 100%;
+}
+
+.text {
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.content {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text h1 {
+    color: #51F90E;
+    font-family: 'Nexa-Heavy';
+    font-size: 75px;
+    margin: 50px 0px 20px 0px;
+    text-transform: capitalize;
+}
+
+.text h5 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.text p {
+    color: white;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+
+.button-reseller {
+    background-color: #51F90E;
+    color: black;
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+button:hover {
+    transform: scale(1.2);
+    background-color: transparent;
+    color: #51F90E;
+    border: 2px solid #51F90E;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+/* ####################### CONTACT INFO ####################### */
+
+.info-section {
+    align-items: center !important;
+}
+
+.info-container:hover {
+    .text-color {
+        color: #51F90E !important;
+        transition: 0.6s !important;
+    }
+
+    box-shadow: 0px 0px 45px 5px rgba(255, 255, 255, 0.1) !important;
+    transition: 0.6s !important;
+}
+
+.info-container {
+    background-color: #0E1A20 !important;
+}
+
+.btn-text-color {
+    color: #51F90E !important;
+}
+
+.btn-text-color:hover {
+    color: black !important;
+    transition: 0.6s !important;
+    background-color: #51F90E !important;
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.a-center-white {
+    align-items: center !important;
+    color: white !important;
+}
+
+.a-center-white:hover {
+    color: #51F90E !important;
+    transition: 0.6s !important;
+}
+
+
+/* ####################### MEDIA QUERIES ####################### */
+
+@media screen and (max-width: 1180px) {
+    .about {
+        width: 100%;
+        height: auto;
+        padding: 70px 0px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about .content img {
+        margin-bottom: 35px;
+    }
+
+    .text h1 {
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+}
+
+.info-container {
+    width: 75%;
+}
+
+@media (min-width: 1188px) {
+    .info-container {
+        width: 25%;
+    }
+}
+
+@media (max-width: 1188px) {
+    .tisiotti-picture {
+        display: none;
+    }
+}

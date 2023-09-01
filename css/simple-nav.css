@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Nexa-ExtraLight';
+    src: url(/assets/fonts/Nexa-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: 'Nexa-Heavy';
+    src: url(/assets/fonts/Nexa-Heavy.ttf);
+}
+
+@font-face {
+    font-family: 'RONORGERIONDEMO-Regular';
+    src: url(/assets/fonts/RONORGERIONDEMO-Regular.otf);
+}
+
+
+
+
+:root {
+    --primary-color: #51F90E;
+    --secondary-color: #2F2F2F;
+    --terciary-color: #111010;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nexa-ExtraLight';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+.logo img {
+    max-width: 100px;
+}
+
+.main-text {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.hookiah1 {
+    margin-right: 43px;
+    font-family: 'RONORGERIONDEMO-Regular';
+    font-size: 35px !important;
+    color: var(--primary-color) !important;
+    text-shadow: #51F90E 0px 0px 3.5px;
+}
+
+a {
+    text-decoration: none;
+}
