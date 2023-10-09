@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nexa-ExtraLight';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    background: url(/assets/images/1x/Background-4.jpg) no-repeat center;
+}
+
+.main-container {
+    height: 100vh;
+}
+

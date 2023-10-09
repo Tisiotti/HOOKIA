@@ -49,6 +49,12 @@
 
 /* ############## MID FOOTER ##############  */
 
+.footer-title-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-h2 {
     font-family: 'RONORGERIONDEMO-Regular';
     color: #51F90E !important;
