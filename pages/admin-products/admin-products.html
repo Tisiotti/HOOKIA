@@ -33,13 +33,48 @@
         </div>
     </nav>
 
+    <div class="navbar navbar-expand-md bg-transparent" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul id="nav-list" class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/admin-products/admin-products.html">Administrador de
+                            Productos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/admin-users/admin-users.html">Administrador de Usuarios</a>
+                    </li>
+
+                </ul>
+
+                <div class="d-flex text-white">
+                    <div id="user-header-name">
+                    </div>
+                    <div id="user-action">
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
     <div class="container main-container mt-5">
 
-        <h2 class="hookiah1 fs-4 m-0 text-center">Administrador de Productos</h2>
-
+        <div class="row justify-content-center">
+            <h2 class="hookiah1 fs-4 m-0 text-center">Administrador de Productos</h2>
+        </div>
         <button type="button" class="btn btn-dark my-3" data-bs-toggle="modal" data-bs-target="#formModal">
             Añadir
         </button>
@@ -220,6 +255,7 @@
 
     <!-- <script src="/js/admin.js"></script> -->
     <script src="/js/storage.js"></script>
+    <script src="/js/user-info.js"></script>
 </body>
 
 </html>
