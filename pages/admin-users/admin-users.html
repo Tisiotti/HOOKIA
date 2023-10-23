@@ -55,13 +55,9 @@
 
                 </ul>
 
-                <div class="d-flex text-white">
-                    <div id="user-header-name">
-                    </div>
-                    <div id="user-action">
-
-                    </div>
-
+                <div class="d-flex align-items-center text-white">
+                    <div id="user-header-name"></div>
+                    <div id="user-action" class="m-2"></div>
                 </div>
             </div>
         </div>
@@ -150,46 +146,35 @@
                 <form id="formularioProducto">
 
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cargar nuevo producto</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cargar nuevo usuario</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- Input -->
+                        <!-- Input Usuario -->
                         <div class="mb-3">
-                            <label for="tituloProducto" class="form-label">Nombre producto</label>
+                            <label for="tituloProducto" class="form-label">Usuario</label>
                             <input type="text" name="tituloName" class="form-control" id="tituloProducto"
-                                placeholder="Playstation 3" required minlength="3" maxlength="70">
+                                placeholder="John Doe" required minlength="3" maxlength="70">
                         </div>
-                        <!-- Input precio -->
+                        <!-- Input Email -->
                         <div class="mb-3 d-flex gap-3">
                             <div class="w-100">
-                                <label for="precioProducto" class="form-label">Precio</label>
+                                <label for="precioProducto" class="form-label">Email</label>
                                 <input type="number" name="precio" id="precioProducto" class="form-control"
-                                    placeholder="10000" required min="1" max="20000000" step=".01">
-                            </div>
-                            <div class="w-100">
-                                <label for="categoriaProducto" class="form-label">Categoria</label>
-                                <select class="form-select" id="categoriaProducto" name="categoria" required>
-                                    <option value=""></option>
-                                    <option value="consolas">Consolas</option>
-                                    <option value="juegos">Juegos</option>
-                                    <option value="accesorios">Accesorios</option>
-                                </select>
+                                    placeholder="john@doe.com" required min="1" max="20000000" step=".01">
                             </div>
                         </div>
-                        <!-- Input de la Imagen -->
+                        <!-- Input Rol -->
                         <div class="mb-3">
-                            <label for="imagen" class="form-label">URL de la imagen</label>
+                            <label for="imagen" class="form-label">Rol</label>
                             <input type="url" name="imagen" class="form-control" id="imagen"
-                                placeholder="https://dirección-de-la-imagen.com" required minlength="3" maxlength="300">
+                                placeholder="Rol de Usuario" required minlength="3" maxlength="300">
                         </div>
 
-                        <!-- Textarea -->
+                        <!-- Input de seleccionar fecha -->
                         <div class="mb-3">
-                            <label for="descripcionProducto" class="form-label">Descripcion del producto</label>
-                            <textarea name="descripcion" class="form-control" id="descripcionProducto" rows="3" required
-                                minlength="8" maxlength="400" placeholder="Descripción del producto...">
-                            </textarea>
+                            <label for="fecha" class="form-label">Fecha de creación</label>
+                            <input type="date" name="fecha" class="form-control" id="fecha" required>
                         </div>
 
                     </div>

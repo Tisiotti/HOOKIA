@@ -4,14 +4,15 @@ const headerUserInfo = document.getElementById("user-header-name")
 const headerUserAction = document.getElementById("user-action")
 const navbarLink = document.querySelector("ul.navbar-nav#nav-list")
 
+// Mostrar el nombre del usuario 
+if (currentUser) {
+    headerUserInfo.innerText = currentUser.name
+}
 
-headerUserInfo.innerText = currentUser ? currentUser.fullname : ""
-
-
-if(currentUser) {
+if (currentUser) {
     headerUserAction.innerHTML = `<button class="btn btn-danger" onclick="logout()">Logout</button>`
     //Checkear si el user logueado es ADMIN
-    if(currentUser.role === 'ROLE_ADMIN') {
+    if (currentUser.role === 'ROLE_ADMIN') {
         //Deberíamos pintar dichos botones
 
         const adminProductLink = document.createElement('li')
@@ -19,12 +20,12 @@ if(currentUser) {
         adminProductLink.id = 'nav-admin-product'
         // Si necesito agregarle la clase  active al botón
         const url = window.location.pathname;
-        if(url.includes('admin.html')) {
+        if (url.includes('admin.html')) {
 
             adminProductLink.classList.add('active')
         }
 
-        
+
 
 
         const link = document.createElement('a')
@@ -46,7 +47,7 @@ if(currentUser) {
 
 function logout() {
     localStorage.removeItem("currentUser")
-    setTimeout(function() {
+    setTimeout(function () {
         window.location.href = "/index.html"
     }, 500)
 }

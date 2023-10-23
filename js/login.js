@@ -69,7 +69,7 @@ loginForm.addEventListener("submit", (event) => {
     if (userExist.role === "ROLE_ADMIN") {
         setTimeout(function () {
             window.location.href = '/pages/admin-products/admin-products.html'
-        }, 2000)
+        })
         return;
     }
 
@@ -81,5 +81,5 @@ loginForm.addEventListener("submit", (event) => {
 
     setTimeout(function () {
         window.location.href = '/index.html'
-    }, 1000)
+    }, 2000)
 })

@@ -1,12 +1,12 @@
 localStorage.setItem("nombre", 200)
-localStorage.setItem("currentUser", "Pedro Talio")
+localStorage.setItem("currentUser", '{"name": "Pedro Talio"}')
 
 const nombreGuardado = localStorage.getItem("nombre")
 
 console.log(JSON.parse(nombreGuardado))
 
 
-Swal.fire('Bienvenido', `Que bueno verte de nuevo Admin`)
+Swal.fire('Bienvenido', `Que bueno verte de nuevo`)
 
 // localStorage.removeItem("currentUser")
 
@@ -24,7 +24,7 @@ const users =
 localStorage.setItem("usuariosGuardados", JSON.stringify(users))
 
 // Cuando obtengo el dato lo tranformo a un objeto JS para poder trabajarlo como tal
-const temp = JSON.parse(    localStorage.getItem("usuariosGuardados")    )
+const temp = JSON.parse(localStorage.getItem("usuariosGuardados"))
 
 
 console.log(temp)
