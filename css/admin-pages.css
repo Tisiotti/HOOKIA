@@ -16,3 +16,13 @@ body {
 .main-container {
     height: 100vh;
 }
+
+.adm-category-anchor {
+    color: rgb(65, 65, 65) !important;
+    background-color: rgba(231, 231, 231, 0.829) !important;
+    border-radius: 5px;
+}
+
+.adm-category-anchor:hover {
+    color: black !important;
+}
