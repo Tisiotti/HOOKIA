@@ -46,13 +46,13 @@ let idEdit;
 let modalTitle = document.getElementById("coffeModalLabel");
 let isEditing = false;
 const btnSubmit = document.querySelector('button.btn[type="submit"]')
-const tableBodyHTML = document.querySelector("table-body")
+const tableBodyHTML = document.querySelector("#table-body")
 const inputFilterProduct = document.getElementById("search-product")
 const formNewProduct = document.getElementById("formProduct")
 const selectCategory = document.getElementById("CategoryProducts");
 
 
-pintarProductos(ropa);
+
 
 function pintarProductos(arrayAPintar) {
 
@@ -83,7 +83,7 @@ function pintarProductos(arrayAPintar) {
     })
 }
 
-
+pintarProductos(ropa);
 
 
 // - BORRAR PRODUCTOS
