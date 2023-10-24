@@ -66,7 +66,7 @@
 
 
 
-    <div class="container main-container mt-5">
+    <div class="container mt-5 object-fit-contain">
 
         <div class="row justify-content-center">
             <h2 class="hookiah1 fs-4 m-0 text-center">Administrador de Productos</h2>
@@ -74,7 +74,7 @@
         <button type="button" class="btn btn-dark my-3" data-bs-toggle="modal" data-bs-target="#formModal">
             Añadir
         </button>
-        <div class="row">
+        <div class="row mb-5">
             <div class="col-12 col-md-12 bg-dark-subtle">
                 <!-- #Tabla -->
                 <div class="mb-3">
@@ -89,6 +89,7 @@
                             <th scope="col">Descripcion Producto</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Categoria</th>
+                            <th scope="col">Fecha de entrada</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
@@ -124,7 +125,7 @@
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Cargar nuevo producto</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body">    
                         <!-- Input -->
                         <div class="mb-3">
                             <label for="tituloProducto" class="form-label">Nombre producto</label>
@@ -252,6 +253,7 @@
     <!-- <script src="/js/admin.js"></script> -->
     <script src="/js/storage.js"></script>
     <script src="/js/user-info.js"></script>
+    <script src="/js/admin-product.js"></script>
 </body>
 
 </html>

@@ -13,10 +13,6 @@ body {
     background: url(/assets/images/1x/Background-4.jpg) no-repeat center;
 }
 
-.main-container {
-    height: 100vh;
-}
-
 .adm-category-anchor {
     color: rgb(65, 65, 65) !important;
     background-color: rgba(231, 231, 231, 0.829) !important;
@@ -25,4 +21,10 @@ body {
 
 .adm-category-anchor:hover {
     color: black !important;
+}
+
+.table-image > img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
