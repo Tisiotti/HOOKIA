@@ -2,31 +2,38 @@ const userInicio = [
     {
         fullname: 'Bruno Tisiotti',
         email: 'admin@admin.com',
-        id: '6',
+        id: '1',
+        password: 'admin',
+        role: "ROLE_ADMIN"
+    },
+    {
+        fullname: 'Ricardo Fort',
+        email: 'admin2@admin.com',
+        id: '2',
         password: 'admin',
         role: "ROLE_ADMIN"
     },
     {
         fullname: 'Samantha Davis',
         email: 'samantha.davis@example.com',
-        id: '7',
+        id: '3',
         password: 'alfabeta',
         role: "ROLE_CLIENT"
     },
     {
         fullname: 'James Moore',
         email: 'james.moore@example.com',
-        id: '8',
+        id: '4',
         password: 'alfabeta',
         role: "ROLE_CLIENT"
     },
     {
         fullname: 'Isabella Taylor',
         email: 'isabella.taylor@example.com',
-        id: '9',
+        id: '5',
         password: 'alfabeta',
         role: "ROLE_CLIENT"
-    },
+    }
 ]
 
 // if( !localStorage.getItem("users")  ) {
@@ -48,7 +55,7 @@ loginForm.addEventListener("submit", (event) => {
     //2- Capturar los datos del formulario
     const emailInput = event.target.elements.email.value;
     const passwordInput = event.target.elements.password.value;
-    
+
     //3- Validar los datos del formulario (email y password) con los datos de localStorage
     const userExist = users.find(usr => {
 
@@ -64,7 +71,7 @@ loginForm.addEventListener("submit", (event) => {
         Swal.fire("Login incorrecto", "Los datos ingresados son incorrectos", "error");
         return;
     }
-
+    localStorage.setItem("currentUser", JSON.stringify(userExist))
     //5- Redireccionar a la página principal 
     if (userExist.role === "ROLE_ADMIN") {
         setTimeout(function () {
@@ -81,5 +88,5 @@ loginForm.addEventListener("submit", (event) => {
 
     setTimeout(function () {
         window.location.href = '/index.html'
-    }, 2000)
+    }, 1500)
 })
