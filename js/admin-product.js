@@ -37,22 +37,76 @@ let ropaPrimerInicio = [
     },
 ];
 
+
 let ropa = JSON.parse(localStorage.getItem("rop")) || ropaPrimerInicio
 if (JSON.parse(localStorage.getItem("rop")) === null) {
     localStorage.setItem("rop", JSON.stringify(ropa))
 }
 
-let idEdit;
-let modalTitle = document.getElementById("coffeModalLabel");
-let isEditing = false;
-const btnSubmit = document.querySelector('button.btn[type="submit"]')
+let idEditar;
+const btn = document.querySelector('button#btnn[type="submit"]')
 const tableBodyHTML = document.querySelector("#table-body")
-const inputFilterProduct = document.getElementById("search-product")
-const formNewProduct = document.getElementById("formProduct")
-const selectCategory = document.getElementById("CategoryProducts");
 
 
 
+
+const inputFiltrarHTML = document.getElementById("filtrar")
+
+const formularioProductoHTML = document.getElementById("formularioProducto")
+
+
+// AÑADIR PRODUCTOS CON EL FORMULARIO de HTML 
+
+formularioProductoHTML.addEventListener("submit", (evt) => {
+    evt.preventDefault()
+
+    const titulo = document.getElementById("tituloProducto").value
+    const imagen = document.getElementById("imagen").value
+    const descripcion = document.getElementById("descripcionProducto").value
+    const precio = document.getElementById("precioProducto").value
+    const fechaEntrada = document.getElementById("fechaEntrada").value
+    const categoria = document.getElementById("categoriaProducto").value
+
+    const nuevoProducto = {
+        titulo: titulo,
+        imagen: imagen,
+        descripcion: descripcion,
+        precio: precio,
+        fechaEntrada: fechaEntrada,
+        categoria: categoria
+    }
+
+    if (idEditar) {
+        const indiceEncontrado = ropa.findIndex((productoFindIndex) => {
+            if (productoFindIndex.id === idEditar) {
+                return true
+            }
+            return false
+        })
+        ropa[indiceEncontrado] = nuevoProducto
+        idEditar = undefined
+        btn.innerHTML = "Añadir producto"
+    } else {
+        ropa.push(nuevoProducto)
+    }
+
+    pintarProductos(ropa)
+
+    localStorage.setItem("rop", JSON.stringify(ropa))
+
+
+    btn.innerHTML = "Añadir producto"
+    formularioProductoHTML.reset()
+    formularioProductoHTML.classList.remove("was-validated")
+    pintarProductos(ropa)
+}) 
+
+
+
+
+
+
+// - PINTAR PRODUCTOS
 
 function pintarProductos(arrayAPintar) {
 
@@ -83,7 +137,25 @@ function pintarProductos(arrayAPintar) {
     })
 }
 
-pintarProductos(ropa);
+pintarProductos(ropa)
+
+// FILTRAR PRODUCTOS
+inputFiltrarHTML.addEventListener('keyup', (evt) => {
+
+    const busqueda = evt.target.value.toLowerCase();
+
+    const resultado = ropa.filter((producto) => {
+        //Iterar cada producto
+        const titulo = producto.titulo.toLowerCase()
+        //Vamor a mirar si la busqueda coincide con el titulo
+        if (titulo.includes(busqueda)) {
+            return true
+        }
+        return false
+    })
+    pintarProductos(resultado)
+
+})
 
 
 // - BORRAR PRODUCTOS
@@ -121,34 +193,3 @@ const borrarProducto = (idABuscar) => {
 
 // - EDITAR PRODUCTOS
 
-const editarProducto = function (idRecibido) {
-
-    console.log(`Editar elemento ${idRecibido}`)
-
-    const productoEditar = ropa.find((prod) => {
-        if (prod.id === idRecibido) {
-            return true
-        }
-    })
-
-    // Resguardo si find no encontro nada = undefined
-    if (!productoEditar) return;
-
-    idEditar = productoEditar.id
-
-    // Deberíamos rellenar nuestro formulario con los datos del elemento a editar
-    const elements = formularioProductoHTML.elements;
-
-    elements.tituloName.value = productoEditar.titulo;
-    elements.precio.value = productoEditar.precio;
-    elements.descripcion.value = productoEditar.descripcion;
-    elements.imagen.value = productoEditar.imagen;
-    elements.categoria.value = productoEditar.categoria;
-    // Modificar el botón de agregar con uno de editar
-    // Luego reemplazar el producto anterior con los datos nuevos
-
-
-    btn.innerText = "Editar Producto"
-    btn.classList.add("btn-success")
-
-}

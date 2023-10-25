@@ -46,11 +46,13 @@
                 <ul id="nav-list" class="navbar-nav me-auto mb-2 mb-lg-0 p-5">
 
                     <li class="nav-item">
-                        <a class="nav-link text-center adm-category-anchor m-2 p-2" href="/pages/admin-products/admin-products.html">Administrador de Productos</a>
+                        <a class="nav-link text-center adm-category-anchor m-2 p-2"
+                            href="/pages/admin-products/admin-products.html">Administrador de Productos</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-center adm-category-anchor m-2 p-2" href="/pages/admin-users/admin-users.html">Administrador de Usuarios</a>
+                        <a class="nav-link text-center adm-category-anchor m-2 p-2"
+                            href="/pages/admin-users/admin-users.html">Administrador de Usuarios</a>
                     </li>
 
                 </ul>
@@ -59,7 +61,7 @@
                     <div id="user-header-name"></div>
                     <div id="user-action" class="m-2"></div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -81,7 +83,7 @@
                     <label for="filtrar" class="form-label pt-1">Filtrar</label>
                     <input type="text" class="form-control" id="filtrar" placeholder="Nombre producto">
                 </div>
-                <table class="table table-dark table-striped">
+                <table class=" table table-dark table-striped">
                     <thead>
                         <tr>
                             <th scope="col">Imagen</th>
@@ -95,15 +97,6 @@
                     </thead>
                     <tbody id="table-body">
 
-                        <!-- <tr>
-                        <td class="table-image">
-                                <img src="https://stylewatch.vtexassets.com/arquivos/ids/233580-800-800?v=638188815205330000&width=800&height=800&aspect=true" alt="">
-                        </td>
-                        <td class="table-title">PS5</td>
-                        <td class="table-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, laudantium.</td>
-                        <td class="table-price">1000</td>
-                        <td class="table-category">Consolas</td>
-                    </tr> -->
 
                     </tbody>
                 </table>
@@ -125,7 +118,7 @@
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Cargar nuevo producto</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">    
+                    <div class="modal-body">
                         <!-- Input -->
                         <div class="mb-3">
                             <label for="tituloProducto" class="form-label">Nombre producto</label>
@@ -139,6 +132,7 @@
                                 <input type="number" name="precio" id="precioProducto" class="form-control"
                                     placeholder="10000" required min="1" max="20000000" step=".01">
                             </div>
+                            <!-- Input categoria -->
                             <div class="w-100">
                                 <label for="categoriaProducto" class="form-label">Categoria</label>
                                 <select class="form-select" id="categoriaProducto" name="categoria" required>
@@ -163,13 +157,16 @@
                                 minlength="8" maxlength="400" placeholder="Descripción del producto...">
                             </textarea>
                         </div>
+                        <!--  Input de la fecha -->
+                        <div class="mb-3">
+                            <label for="fechaEntrada" class="form-label">Fecha de entrada</label>
+                            <input type="date" name="fecha" class="form-control" id="fechaEntrada" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
 
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-
-                        <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Agregar producto</button>
-                    </div>
+                            <button type="submit" class="btn btn-dark" id="btnn" data-bs-dismiss="modal">Agregar producto</button>
+                        </div>
 
                 </form>
             </div>
@@ -254,6 +251,7 @@
     <script src="/js/storage.js"></script>
     <script src="/js/user-info.js"></script>
     <script src="/js/admin-product.js"></script>
+
 </body>
 
 </html>

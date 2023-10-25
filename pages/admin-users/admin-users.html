@@ -46,11 +46,13 @@
                 <ul id="nav-list" class="navbar-nav me-auto mb-2 mb-lg-0 p-5">
 
                     <li class="nav-item">
-                        <a class="nav-link text-center adm-category-anchor m-2 p-2" href="/pages/admin-products/admin-products.html">Administrador de Productos</a>
+                        <a class="nav-link text-center adm-category-anchor m-2 p-2"
+                            href="/pages/admin-products/admin-products.html">Administrador de Productos</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-center adm-category-anchor m-2 p-2" href="/pages/admin-users/admin-users.html">Administrador de Usuarios</a>
+                        <a class="nav-link text-center adm-category-anchor m-2 p-2"
+                            href="/pages/admin-users/admin-users.html">Administrador de Usuarios</a>
                     </li>
 
                 </ul>
@@ -59,7 +61,7 @@
                     <div id="user-header-name"></div>
                     <div id="user-action" class="m-2"></div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -70,67 +72,24 @@
         <div class="row justify-content-center">
             <h2 class="hookiah1 fs-4 m-0 text-center ">Administrador de Usuarios</h2>
         </div>
-        <button type="button" class="btn btn-dark my-3" data-bs-toggle="modal" data-bs-target="#formModal">
-            Añadir
-        </button>
-        <div class="row">
+        <div class="row m-5">
             <div class="col-12 col-md-12 bg-dark-subtle">
                 <!-- #Tabla -->
-                <div class="mb-3">
-                    <label for="filtrar" class="form-label pt-1">Filtrar</label>
-                    <input type="text" class="form-control" id="filtrar" placeholder="Nombre producto">
+                <div class="m-3">
                 </div>
                 <table class="table table-dark table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Usuario</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Rol</th>
-                            <th scope="col">Creado</th>
-                            <th scope="col">Acciones</th>
+                            <th>Nombre</th>
+                            <th>Correo Electrónico</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
-                    
-                    <tr>
-                        <td>Nombre de usuario</td>
-                        <td>correo@ejemplo.com</td>
-                        <td>Rol de usuario</td>
-                        <td>Fecha de creación</td>
-                        <td>
-                            <button class="btn btn-primary">Editar</button>
-                            <button class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nombre de usuario</td>
-                        <td>correo@ejemplo.com</td>
-                        <td>Rol de usuario</td>
-                        <td>Fecha de creación</td>
-                        <td>
-                            <button class="btn btn-primary">Editar</button>
-                            <button class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nombre de usuario</td>
-                        <td>correo@ejemplo.com</td>
-                        <td>Rol de usuario</td>
-                        <td>Fecha de creación</td>
-                        <td>
-                            <button class="btn btn-primary">Editar</button>
-                            <button class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nombre de usuario</td>
-                        <td>correo@ejemplo.com</td>
-                        <td>Rol de usuario</td>
-                        <td>Fecha de creación</td>
-                        <td>
-                            <button class="btn btn-primary">Editar</button>
-                            <button class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
+
+                    <tbody class="text-start" id="table-body-users">
+                                    <!-- Las filas de usuarios generadas por JavaScript se agregarán aquí -->
+                    </tbody>
                 </table>
             </div>
 
@@ -139,57 +98,6 @@
 
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- #Formulario -->
-                <form id="formularioProducto">
-
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cargar nuevo usuario</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Input Usuario -->
-                        <div class="mb-3">
-                            <label for="tituloProducto" class="form-label">Usuario</label>
-                            <input type="text" name="tituloName" class="form-control" id="tituloProducto"
-                                placeholder="John Doe" required minlength="3" maxlength="70">
-                        </div>
-                        <!-- Input Email -->
-                        <div class="mb-3 d-flex gap-3">
-                            <div class="w-100">
-                                <label for="precioProducto" class="form-label">Email</label>
-                                <input type="number" name="precio" id="precioProducto" class="form-control"
-                                    placeholder="john@doe.com" required min="1" max="20000000" step=".01">
-                            </div>
-                        </div>
-                        <!-- Input Rol -->
-                        <div class="mb-3">
-                            <label for="imagen" class="form-label">Rol</label>
-                            <input type="url" name="imagen" class="form-control" id="imagen"
-                                placeholder="Rol de Usuario" required minlength="3" maxlength="300">
-                        </div>
-
-                        <!-- Input de seleccionar fecha -->
-                        <div class="mb-3">
-                            <label for="fecha" class="form-label">Fecha de creación</label>
-                            <input type="date" name="fecha" class="form-control" id="fecha" required>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-
-                        <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Agregar producto</button>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </div>
-    </div>
 
     <footer>
         <div class="card border-0 footer-container">
@@ -264,9 +172,10 @@
         </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- <script src="/js/admin.js"></script> -->
+
     <script src="/js/storage.js"></script>
     <script src="/js/user-info.js"></script>
+    <script src="/js/admin-users.js"></script>
 </body>
 
 </html>
